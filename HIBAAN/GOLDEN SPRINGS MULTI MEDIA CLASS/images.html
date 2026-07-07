@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGES</title>
+    <style>
+        body {
+            background-image: url('../IMAGES/landscape.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: 'Times New Roman', serif;
+            line-height: normal;
+            color: rgb(244, 244, 244);
+            margin: 0;
+            padding: 20px;
+        }
+        #images {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #images h1 {
+            color: #ffd700;
+            font-size: 2.5rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 24px 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            justify-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            .image-gallery img {
+                max-width: 250px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="images">
+    <h1>My Images</h1>
+    <div class="image-gallery">
+        <!-- Image items will be added here -->
+         <img src="../IMAGES/Golden Springs.png" alt="Golden Springs" height="500px" width="500px">
+         <img src="../IMAGES/Golden Springs.png" alt="Golden Springs" height="500px" width="500px">
+         <img src="../IMAGES/Golden Springs.png" alt="Golden Springs" height="500px" width="500px">
+         <img src="../IMAGES/Golden Springs.png" alt="Golden Springs" height="500px" width="500px">
+         <img src="../IMAGES/Golden Springs.png" alt="Golden Springs" height="500px" width="500px">
+         <img src="../IMAGES/Golden Springs.png" alt="Golden Springs" height="500px" width="500px">
+
+     </div>
+</section>
+</body>
+</html>

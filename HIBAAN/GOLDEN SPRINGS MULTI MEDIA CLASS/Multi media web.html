@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY MULTI MEDIA WEBSITE</title>
+    <style>
+        body{
+            background-image: url("../IMAGES/landscape.png");
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Times New Roman', serif;
+            line-height: normal;
+            color: rgb(244, 244, 244);
+            margin: 0;
+            padding: 20px;
+             
+            
+            
+        }
+        .main-header{
+            position: sticky;
+            top: 0%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            background: rgba(34, 139, 34, 0.6);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .brand{
+            color: #f4f4f4;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            color: #ffd700;
+            text-align: center;
+            font-size: 2.5rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 24px 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+        .site-nav .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .site-nav a{
+            color: #f4f4f4;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);        
+        }
+        .site-nav a:hover{
+            background: rgba(255, 215, 0, 0.4);
+            color: #2e8b57;
+            transform: scaleX(1.05);
+          
+        }
+        /*Responsive for mobile devices*/
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .site-nav .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        .site-nav a {
+            text-decoration: none;
+        }
+        #card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            min-height: 400px;
+        }
+        .card-content{
+            background: rgba(0, 0, 0, 0.5);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: center;
+        }
+        .card-content h2{
+            color: #ffd700;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+        .card-content p{
+            color: #f4f4f4;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        /*responsive for mobile devices*/
+        @media (max-width: 768px) {
+            .card-content {
+                padding: 30px 20px;
+                max-width: 90%;
+            }
+            .card-content h2 {
+                font-size: 1.5rem;
+            }
+            .card-content p {
+                font-size: 1rem;
+            }
+        }
+        footer{
+            background: rgba(34, 139, 34, 0.7);/*same as header but with more opacity*/
+            backdrop-filter: blur(8px);/*blur effect like header*/
+            color: #f4f4f4;/*light text color for contrast*/
+            text-align: center;/*centered text*/
+            padding: 40px 20px;/*space inside (top/bottom 40px, left/right 20px)*/
+            margin-top: 60px;/*space above footer*/
+            border-top: 2px solid rgba(255, 215, 0, 0.3);/*gold border on top*/
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);/*shadow above footer*/
+        }
+        footer h3{
+         color: #ffd700;/*gold color for footer heading*/
+         margin-bottom: 20px;/*space below heading*/
+            font-size: 1.2rem;/*size of footer heading*/
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);/*shadow for footer heading*/
+        }
+        footer p{
+        margin: 10px 0;/*space above and below paragraph*/ 
+        line-height: 1.6;/*line spacing for readability*/
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);/*shadow for footer text*/
+        }
+        .contact-info{
+            margin: 10px 0;/*space above and below contact info*/
+            font-size: 0.95rem;/*size of contact info text slightly smaller than footer text*/
+        }
+        .contact-info a{
+         color: #ffd700; /*gold color for contact links*/
+         text-decoration: none; /*remove underline from links*/
+         transition: color 0.3s ease; /*smooth color transition on hover*/
+        }
+        .contact-info a:hover{
+            color: #fff; /*change to white on hover*/
+            text-shadow: 0px 0px 10px  rgba(255, 215, 0, 0.6);/*glow effect on hover*/  
+           }
+           .social-media{
+            display: flex; /* arrange social media links in a row */
+            justify-content: center; /* center the social media links */
+            gap: 20px; /* space between social media links */
+            margin: 20px 0; /* space above and below social media section */
+            flex-wrap: wrap; /* allow wrapping on smaller screens */
+           }
+              .social-media a{
+                color: #ffd700; /* gold color for social media links */
+                text-decoration: none; /* remove underline from links */
+                font-weight: 500; /* slightly bolder text for social media links */
+                transition: color 0.3s ease; /* smooth color transition on hover */
+              }
+              .social-media a:hover{
+                color: #fff; /* change to white on hover */
+                text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.6); /* glow effect on hover */
+              }
+                /*responsive for mobile devices*/
+                @media (max-width: 768px){
+                    footer{
+                        padding: 30px 15px; /* reduce padding on smaller screens */
+                    }
+                    .social-media{
+                        gap: 10px; /* reduce gap between social media links on smaller screens */
+                        flex-direction: column; /* stack social media links vertically on smaller screens */
+                    }
+                }
+                
+                    
+                
+                
+                
+              
+
+    </style>
+</head>
+<body>
+    <h1>MY MULTI MEDIA WEBSITE</h1>
+    <header class="main-header">
+        <div class="brand">GOLDEN SPRINGS</div>
+      <nav class="site-nav">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="images.html">Images</a>
+            <a href="videos.html">Videos</a>
+            <a href="audio.html">Audio</a>
+        </div>
+      </nav> 
+    </header>
+    <section id="card">
+        <div class="card-content">
+            <h2>This multi media website showcases <br> various types of content.</h2>
+            <p>Welcome to my multi media website! <br>
+                Here you can find a variety of images, videos, and audio files. <br>
+                Explore the different sections to discover interesting content and enjoy the multimedia experience.
+            </p>
+
+        </div>
+
+    </section>
+    <footer>
+        <!-- Footer -->
+         <h3>GOLDEN SPRINGS</h3>
+         <!--copyright text-->
+        <p>&copy; 2026  GOLDEN SPRINGS Multi Media Website. All rights reserved.</p>
+
+        <!--contact information-->
+        <div class="contact-info">
+            <a href="mailto:goldensprings008@gmail.com">Email Us</a> <br>
+            <a href="tel:+256744131492">Call Us</a></p>
+        </div>
+        <!--social media links-->
+        <div class="social-media">
+            <a href="https://www.Facebook.com/Golden%20Springs%20Hibanez" target="_blank" rel="noopener noreferrer">Facebook</a>| <br>
+            <a href="https://www.twitter.com/@golden_spr38106" target="_blank" rel="noopener noreferrer">Twitter</a> |<br>
+            <a href="https://www.instagram.com/golden_springs1" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </footer>
+    
+</body>
+</html>
